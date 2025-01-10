@@ -8,11 +8,6 @@ const FetchData = () => {
   console.log(supabase);
 
   const fetchUsers = async () => {
-    const newRecord = {
-      bname: "discover",
-      bcolor: "black",
-      bprice: 100000,
-    };
     const { data, error } = await supabase.from("bike").select("*");
     console.log("Data:", data, "Error:", error);
     if (error) {
